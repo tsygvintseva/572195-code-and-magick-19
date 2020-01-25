@@ -183,8 +183,14 @@
 
 <script>
 
+  var WIND_SPEED = 5;
+  var WIND_AGAINST_SPEED = 2;
+  var START_WIDTH_RATE = 1.337;
+  var MIDFIELD_WIDTH = 2;
+  var TWO_THIRDS_HEIGHT = 0.333;
+
   var fireballSize = 22;
-  var getFireballSpeed = function(left) {
+  var getFireballSpeed = function (left) {
     return left ? 5 : 2;
   };
 
@@ -192,18 +198,15 @@
   var wizardWidth = 70;
 
   var getWizardHeight = function (wizardWidth) {
-    var wizardHeight = 1.337 * wizardWidth;
-    return wizardHeight;
+    return 1.337 * wizardWidth;
   }
 
-  var getWizardX = function(width) {
-    var wizardX = (width - wizardWidth) / 2;
-    return wizardX;
+  var getWizardX = function (width) {
+    return (width - wizardWidth) / 2;
   };
 
-  var getWizardY = function(height) {
-    var wizardY = height * 1 / 3;
-    return wizardY;
+  var getWizardY = function (height) {
+    return height * 1 / 3;
   };
 
 </script>
